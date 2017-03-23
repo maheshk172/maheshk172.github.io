@@ -1,0 +1,40 @@
+<div class="wrap-form">
+	<form>
+		<div class="row">
+			<div class="form-group">
+				<h4> <strong>Text to Translate</strong> </h4>
+				<textarea #searchBox id="search-box" class="form-control input-lg search-box" placeholder="type any text to translate" ng-model="vm.text" rows="5"></textarea>
+			</div>
+
+			<div class="form-group">
+				<div class="radio">
+				  <label>
+				  <input type="radio" name="sourceLang" value="da" ng-model="vm.sourceLang"> Danish</label>
+				</div>
+				<div class="radio">
+				  <label>
+				  <input type="radio" name="sourceLang" value="sv" ng-model="vm.sourceLang"> Swedish</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="sourceLang" value="no" ng-model="vm.sourceLang"> Norweign</label>
+				</div>
+					
+			</div>	
+		</div>
+		<button type="submit" 
+				class="btn btn-lg bt-primary" 
+				ng-click="vm.translate(vm.text)"> 
+					Translate to English 
+		</button>	
+	
+	</form>
+	<br>
+	<br>
+	<div class="row" ng-if="vm.translatedText !== ''">
+		<h4> <strong>Translated text in English</strong> </h4>
+		<div class="well">
+			<span ng-bind-html="vm.translatedText"></span>
+		</div>
+	</div>
+</div>	
+	

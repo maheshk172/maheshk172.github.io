@@ -1,0 +1,75 @@
+<div class="row">
+	<form>
+		<div class="form-group col-8">
+			<h4> <strong>Git Hub User</strong> </h4>
+			<input #searchBox id="search-box" class="form-control input-lg search-box" placeholder="Search for any github user" ng-model="vm.userName"/>
+		</div>
+		<div class="col-4">
+			<button type="submit" class="btn btn-lg bt-primary" ng-click="vm.searchUser(vm.userName)"> Search </button>	
+		</div>		
+	</form>
+
+
+	<div class="search-result" ng-if="vm.repos">
+		<h4> <strong>Repository Details</strong> </h4>
+		<div ng-repeat="repo in vm.repos">
+			<div class="jumbotron">
+				<div class="row">
+					<div class="col-md-6">
+						<label>Repository Name</label>
+					</div>
+					<div class="col-md-6">
+						{{repo.full_name}}
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label>Owner Login</label>
+					</div>
+					<div class="col-md-6">
+						{{repo.owner.login}}
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label>Is this a privete Repo ? </label>
+					</div>
+					<div class="col-md-6">
+						{{repo.private}}
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label>Repo Description</label>
+					</div>
+					<div class="col-md-6">
+						{{repo.description}}
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label>Languages used</label>
+					</div>
+					<div class="col-md-6">
+						{{repo.language}}
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label>Fork Count</label>
+					</div>
+					<div class="col-md-6">
+						{{repo.forks_count}}
+					</div>	
+				</div>
+
+			</div>			
+		</div>
+	</div>	
+
+</div>

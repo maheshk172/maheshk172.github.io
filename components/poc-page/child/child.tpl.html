@@ -1,0 +1,9 @@
+<div>
+	<h3>This ones coming from Child</h3>
+
+	<button type="button" ng-click="vm.onClickMeCallback({number1:10, number2:10})">Click Me (10, 10)</button>
+	<button type="button" ng-click="vm.onClickMeCallback({number1:20, number2:20})">Click Me (20, 20)</button>
+	<button type="button" ng-click="vm.onClickMeCallback({number1:20, number2:30})">Click Me (30, 30)</button>
+
+	<grand-child-component on-click-me-callback="vm.onClickMeCallback(number1, number2)"></grand-child-component>
+</div>

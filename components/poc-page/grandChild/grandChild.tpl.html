@@ -1,0 +1,12 @@
+<div>
+	<h3>This ones coming from Grand Child</h3>
+    <!-- This works if I declare parent component -->
+	<button type="button" ng-click="vm.parent.onClickMeCallback({number1:40, number2:40})">Click Me (40, 40)</button>
+	<button type="button" ng-click="vm.parent.onClickMeCallback({number1:50, number2:40})">Click Me (50, 50)</button>
+	<button type="button" ng-click="vm.parent.onClickMeCallback({number1:60, number2:60})">Click Me (60, 60)</button>
+
+   <!-- <button type="button" ng-click="vm.onClickMeCallback({number1:40, number2:40})">Click Me (40, 40)</button>
+	<button type="button" ng-click="vm.onClickMeCallback({number1:50, number2:40})">Click Me (50, 50)</button>
+	<button type="button" ng-click="vm.onClickMeCallback({number1:60, number2:60})">Click Me (60, 60)</button>
+-->
+</div>
